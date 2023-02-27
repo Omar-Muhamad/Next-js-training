@@ -29,13 +29,4 @@ const Blog = async () => {
   );
 };
 
-export const getStaticParams = async () => {
-  const data = await getData();
-  let params = [];
-  for (id of data) {
-    params.push({ slug: id });
-  }
-  return params;
-};
-
 export default Blog;
